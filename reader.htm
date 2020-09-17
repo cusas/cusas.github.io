@@ -1,0 +1,17 @@
+<script>
+function getinfo(){
+	var ret="";
+	while(1){
+	for (var obj in window.ZhangYueJS){
+		ret+=obj+"\r\n";
+	}
+	if(ret!=""){
+		break;
+	}
+	}
+	if(ret!=""){
+	alert(ret);
+	}
+}
+getinfo();
+</script>
