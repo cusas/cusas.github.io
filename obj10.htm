@@ -8,7 +8,7 @@ function gotarget(){
 for(var i=0;i<10;i++){
 setTimeout("getinfo()",i*5);
 }
-document.getElementById('target').src="https://z3.cn/";
+document.getElementById('target').src="https://www.zhangyue.com/";
 }
 function getinfo(){
 	var ret="";
@@ -24,6 +24,7 @@ function getinfo(){
 </script>
 	</head>
 <body onload="javascript:gotarget()">
+	<a onclick="javascript:getinfo()">getinfo</a>
 <iframe id="target" name="target" src="about:blank"></iframe>
 </body>
 
