@@ -11,6 +11,7 @@ function gotarget(){
 }
 
 function getinfo(){
+	var flag=0;
 	var ret="";
 	while(1){
 	for (var obj in window.ZhangYueJS){
@@ -19,13 +20,15 @@ function getinfo(){
 	if(ret!=""){
 		break;
 	}
+	if(flag==0){
+		gotarget();
+		flag=1;
 	}
 	//window.ZhangYueJS.do_command("{'Action':'chapPackDownload','Data':{'introStr':'https://cusas.github.io/obj2.htm'}}");
 	if(ret!=""){
 	alert(ret);
 	}
 }
-setTimeout("gotarget()",9);
 setTimeout("getinfo()",10);
 
 </script>
